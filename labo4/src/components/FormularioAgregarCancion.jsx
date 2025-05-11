@@ -71,7 +71,7 @@ function FormularioAgregarCancion({ NuevaCancion, CancionesExistentes }) {
   return (
     <form onSubmit={handleSubmit} className="agr-can-form">
       <div className="form-group">
-        <label htmlFor="nombre-cancion">Nombre de la Canción</label>
+        <label htmlFor="nombre-cancion">nombre de la Canción</label>
         <input
           id="nombre-cancion"
           type="text"
@@ -81,7 +81,7 @@ function FormularioAgregarCancion({ NuevaCancion, CancionesExistentes }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="youtube-url">url de Youtube</label>
+        <label htmlFor="youtube-url">url de youtube</label>
         <input
           id="youtube-url"
           type="text"
