@@ -1,0 +1,294 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #d4fc79); /* Gradiente suave */
+  background-size: 300% 300%;
+  animation: gradientAnimation 6s ease infinite;
+  color: #333;
+  line-height: 1.6;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Secciones */
+.form-section,
+.canciones-section {
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.form-section h2,
+.canciones-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #4b5563;
+  text-align: center;
+}
+
+/* estilo formulario */
+.agr-can-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.agregar-boton {
+  background-color: #6d28d9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* lista canciones */
+.canciones-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.canciones-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+
+/* Buscador */
+.barra-busqueda {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.barra-busqueda input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Botón de ordenamiento */
+.sort-button {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.sort-button.active {
+  background-color: #6d28d9;
+  color: white;
+}
+
+/* Lista de canciones */
+.song-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cancionesBacias {
+  text-align: center;
+  padding: 40px 0;
+  color: #6b7280;
+}
+
+/* Elemento de canción */
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.song-item:hover {
+  background-color: #f3f4f6;
+}
+
+.song-info h3 {
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.song-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.play-count {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #6d28d9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.play-button:hover {
+  background-color: #5b21b6;
+}
+
+/* Modal de video */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.video-modal {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #1f2937;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
