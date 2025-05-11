@@ -81,7 +81,7 @@ function FormularioAgregarCancion({ NuevaCancion, CancionesExistentes }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="youtube-url">URL Youtube</label>
+        <label htmlFor="youtube-url">url de Youtube</label>
         <input
           id="youtube-url"
           type="text"
